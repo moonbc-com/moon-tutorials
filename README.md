@@ -1,12 +1,21 @@
-# MoonLight tutorial photos
+# moon-tutorials
 
-Sample photos for the tutorials in [MoonLight](https://github.com/moonbc-com) (Help › Tutorials…), a photo library and
-raw developer for macOS. They aren't part of the app: MoonLight downloads a tutorial's photos from this repository's
-releases the first time the tutorial starts and checks each file against its SHA-256.
+Downloadable tutorial resources for the moon-* apps (MoonLight, …). The apps don't ship them, so they stay small:
+an app downloads a tutorial's files from this repository's releases the first time the tutorial starts, and checks
+each file against the size and SHA-256 written in the app.
 
-The photos are in the release assets (not in the git tree). All of them are raw.pixls.us samples released into the
-public domain under CC0 1.0 — see [CREDITS.md](CREDITS.md). Locations (GPS) were removed.
+## Layout
 
-| Release | Files | Size |
-|---|---|---|
-| photos-1 | 14 JPEGs (1800 px), 1 DNG, 1 CR3 | 25 MB |
+- **One release per app and set**, tagged `<app>-<set>-<version>` — e.g. `moon-light-photos-1`. The files are the
+  release's assets (not in the git tree), flat, named as the app asks for them.
+- **A folder per app** in this repository (`moon-light/`, …) with the set's credits and notes.
+- **Never replace an asset in a published release**: apps check every file by its digest. A changed set is a new
+  release (`moon-light-photos-2`) and the app's manifest moves to it in the same app version.
+
+Download URL: `https://github.com/moonbc-com/moon-tutorials/releases/download/<tag>/<file>`
+
+## Sets
+
+| App | Release | Contents | Size | Licence |
+|---|---|---|---|---|
+| MoonLight | `moon-light-photos-1` | 14 JPEGs (1800 px), 1 DNG, 1 CR3 for the four tutorials | 25 MB | CC0 (raw.pixls.us), see [moon-light/CREDITS.md](moon-light/CREDITS.md) |
